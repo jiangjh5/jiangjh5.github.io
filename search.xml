@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[note-01]]></title>
+    <url>%2F2017%2F09%2F28%2Fnote-01%2F</url>
+    <content type="text"><![CDATA[curl 12curl -X GET [URL] -H "DAAUTH:token [tokenStr]]"curl -X GET [URL] -H "DAAUTH:basic [base64_encode('username:pwd')]" -H "API:mobile 1.0" Apache httpd 12$ httpd.exe -k install -n "httpd-2.4.27-vc14"$ httpd.exe -k uninstall -n "httpd-2.4.27-vc14" PHP php扩展库curl 将php解压文件中的libssh2.dll、php_curl.dll、ssleay32.dll、libeay32.dll放入Windows/System32文件夹(即使是用64位系统) 然后，把libssh2.dll放入Apache2.4解压目录下的bin文件夹 最后，在php.ini中，把extension=php_curl.dll前面的分号去掉,重启Apache，OK！ php odbc hive 1Driver=&#123;%s&#125;;HiveServerType=2;AuthMech=2;Schema=dm_finance;host=%s;port=%d php isset 若变量不存在则返回 FALSE 若变量存在且其值为NULL，也返回 FALSE 若变量存在且值不为NULL，则返回 TURE empty “”、0、”0”、NULL、、FALSE、array()、var $var; 以及没有任何属性的对象 Windows windows cmd net user1234567net user test testpwd /add net localgroup administrators test /add net localgroup admimistratorsnet user testnet localgroup admimistrators test /del net user test /delnet users 以某个用户运行1runas /user:jiangjh5 cmd win+R 快捷命令 msconfig shell:startup JS JS getEventListeners($0) $(“”).trigger(“”); Postgres postgres select * from pg_available_extensions; CREATE EXTENSION tablefunc;123456$ sudo su postgres$ psql$ \l // list database$ \c // connect a database$ \conninfo // 数据库连接信息 Java Keytool 查看apk签名信息 keytool -list -printcert -jarfile codata_v0.11.20170912_release_20170912183830.apks adb shell dumpsys activity adb shell dumpsys activity activities // 导出task任务栈 adb pull 日志文件到本地目录 adb pull /sdcard/crash .]]></content>
+      <categories>
+        <category>note</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[android-crash-01]]></title>
+    <url>%2F2017%2F09%2F28%2Fandroid-crash-01%2F</url>
+    <content type="text"><![CDATA[Issue-11234567891011121314151617java.lang.NullPointerException: Attempt to invoke virtual method &apos;java.lang.Object android.content.Context.getSystemService(java.lang.String)&apos; on a null object reference at android.view.LayoutInflater.from(LayoutInflater.java:232) at android.view.View.inflate(View.java:21035) at com.lenovo.da.fragment.StreamFragment$StreamsExpandableListAdapter.getChildView(StreamFragment.java:227) at com.lenovo.da.fragment.StreamFragment.setCollapseListViewHeightBasedOnChildren(StreamFragment.java:417) at com.lenovo.da.fragment.StreamFragment$2.onGroupCollapse(StreamFragment.java:101) at android.widget.ExpandableListView.collapseGroup(ExpandableListView.java:779) at com.lenovo.da.fragment.StreamFragment$3.doResponse(StreamFragment.java:133) at com.lenovo.da.api.ApiService$CallbackFunc.onResponse(ApiService.java:130) at retrofit2.ExecutorCallAdapterFactory$ExecutorCallbackCall$1$1.run(ExecutorCallAdapterFactory.java:68) at android.os.Handler.handleCallback(Handler.java:751) at android.os.Handler.dispatchMessage(Handler.java:95) at android.os.Looper.loop(Looper.java:154) at android.app.ActivityThread.main(ActivityThread.java:6196) at java.lang.reflect.Method.invoke(Native Method) at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:888) at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:778) fragment在重新创建的过程中，可能getContext()为空，可利用onAttach(Context context)来引用context Issue-21234567891011121314151617java.lang.IllegalArgumentException: View=DecorView@abf9228[] not attached to window manager at android.view.WindowManagerGlobal.findViewLocked(WindowManagerGlobal.java:473) at android.view.WindowManagerGlobal.removeView(WindowManagerGlobal.java:382) at android.view.WindowManagerImpl.removeViewImmediate(WindowManagerImpl.java:124) at android.app.Dialog.dismissDialog(Dialog.java:383) at android.app.Dialog.dismiss(Dialog.java:366) at com.lenovo.da.utils.CommonUtils.togglePieChartProgressDialog(CommonUtils.java:123) at com.lenovo.da.activity.gesturelock.ResetValidateActivity$3.doResponse(ResetValidateActivity.java:192) at com.lenovo.da.api.ApiService$CallbackFunc.onResponse(ApiService.java:130) at retrofit2.ExecutorCallAdapterFactory$ExecutorCallbackCall$1$1.run(ExecutorCallAdapterFactory.java:68) at android.os.Handler.handleCallback(Handler.java:751) at android.os.Handler.dispatchMessage(Handler.java:95) at android.os.Looper.loop(Looper.java:154) at android.app.ActivityThread.main(ActivityThread.java:6196) at java.lang.reflect.Method.invoke(Native Method) at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:888) at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:778) 创建了一个没有attached to window manager的dialog，调用dialog.dismiss时windowManagerGlobal找不到此view]]></content>
+      <categories>
+        <category>android</category>
+      </categories>
+      <tags>
+        <tag>track</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2017%2F09%2F28%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+  </entry>
+</search>
