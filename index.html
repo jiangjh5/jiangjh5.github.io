@@ -404,15 +404,10 @@
       
         
           
-          12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970// ls显示中文 -- 修改/Git/etc/git-completion.bash文件最后增加$ alias ls='ls --show-control-chars --color=auto'// creat 数字签名$ ssh-keygen -t rsa$ git config --global user.name "Your Name"$ git config --global user.email "Your Email"$ git config --global push.default [simple|matching]$ git config user.name "Your Name"$ git config user.email "Your Email"// 详细说明$ git remote    // 查看远程主机$ git remote -v$ git remote add [主机名] [网址]$ git remote show [主机名]$ git remote rm [主机名]$ git remote rename [原主机名] [新主机名]// 基本操作$ git remote add origin git@git.oschina.net:qingfeng/Kuaidi.git$ git branch --set-upstream-to=origin/master$ git pull origin master$ git push -u origin master$ git status$ git checkout -b newBranch origin/master // 创建并切换分支$ git branch [newBranch] // 创建分支 $ git branch -a$ git branch -v // 查看各个分支的最后一次提交$ git branch -merged // 查看哪些分支合并到当前分支$ git branch -no-merged // 查看哪些分
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/09/29/git常用命令/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+            <div class="note default"><p>git 命令总结记录</p></div>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git 命令总结记录</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div></pre></td><td class="code"><pre><div class="line">// ls显示中文 -- 修改/Git/etc/git-completion.bash文件最后增加</div><div class="line">$ <span class="built_in">alias</span> ls=<span class="string">'ls --show-control-chars --color=auto'</span></div><div class="line"></div><div class="line">// creat 数字签名</div><div class="line">$ ssh-keygen -t rsa</div><div class="line"></div><div class="line">$ git config --global user.name <span class="string">"Your Name"</span></div><div class="line">$ git config --global user.email <span class="string">"Your Email"</span></div><div class="line">$ git config --global push.default [simple|matching]</div><div class="line">$ git config user.name <span class="string">"Your Name"</span></div><div class="line">$ git config user.email <span class="string">"Your Email"</span></div><div class="line">// 详细说明</div><div class="line">$ git remote    // 查看远程主机</div><div class="line">$ git remote -v</div><div class="line">$ git remote add [主机名] [网址]</div><div class="line">$ git remote show [主机名]</div><div class="line">$ git remote rm [主机名]</div><div class="line">$ git remote rename [原主机名] [新主机名]</div><div class="line"></div><div class="line">// 基本操作</div><div class="line">$ git remote add origin git@git.oschina.net:qingfeng/Kuaidi.git</div><div class="line">$ git branch --<span class="built_in">set</span>-upstream-to=origin/master</div><div class="line"></div><div class="line">$ git pull origin master</div><div class="line">$ git push -u origin master</div><div class="line"></div><div class="line">$ git status</div><div class="line"></div><div class="line">$ git checkout -b newBranch origin/master // 创建并切换分支</div><div class="line"></div><div class="line">$ git branch [newBranch] // 创建分支 </div><div class="line">$ git branch -a</div><div class="line">$ git branch -v // 查看各个分支的最后一次提交</div><div class="line">$ git branch -merged // 查看哪些分支合并到当前分支</div><div class="line">$ git branch -no-merged // 查看哪些分支未合并到当前分支</div><div class="line">$ git branch -d // 删除分支</div><div class="line">$ git branch -D // 强制删除分支</div><div class="line"></div><div class="line">$ git merge [branchName] // 合并分支</div><div class="line">$ git rebase [branchName] // 更新[branchName]的东西到当前分支</div><div class="line"></div><div class="line">$ git add &lt;file&gt;</div><div class="line">$ git add &lt;folder&gt;</div><div class="line">$ git add --all &lt;file&gt;|&lt;folder&gt;</div><div class="line">$ git rm [filename]</div><div class="line">$ git rm -r -f [foldername]</div><div class="line">$ git commit -m <span class="string">"init&amp;add"</span></div><div class="line"></div><div class="line">$ git init</div><div class="line">$ git checkout --orphan [branchname]</div><div class="line"></div><div class="line">$ git remote -v</div><div class="line">$ git remote -<span class="built_in">set</span>-url origin [new-url]</div><div class="line"></div><div class="line">$ git config http.sslVerify <span class="literal">false</span> // 关闭ssl证书校验</div><div class="line">$ git config core.autocrlf <span class="literal">false</span> // CR LF问题</div><div class="line">$ git config --system credential.helper manager // 记住密码在system级别使用manager来进行管理</div><div class="line">$ git config -l // 查看当前所有config配置项</div><div class="line"></div><div class="line">// 撤回相关</div><div class="line">$ git <span class="built_in">log</span> -2 // 查看最近2次提交日志</div><div class="line">$ git checkout -- [filename] // 撤回到最近一个commit或者add</div><div class="line">$ git reset --hard [commit-id] // 回滚到指定的提交id</div><div class="line">$ git reset --hard HEAD~3 // 回滚最近3次的提交</div><div class="line">$ git reset head [filename] // 撤回add的文件</div><div class="line"></div><div class="line">// tag 相关</div><div class="line">$ git tag // 查询所有tag</div><div class="line">$ git tag v0.8.20170804_TEST // 打标签：v0.8.20170804_TEST</div><div class="line">$ git show -q v0.8.20170804_TEST // 查询标签对应提交版本号信息</div></pre></td></tr></table></figure>
+          
         
       
     </div>
@@ -552,64 +547,84 @@
       
         
           
-          curl 
-12curl -X GET [URL] -H "DAAUTH:token [tokenStr]]"curl -X GET [URL] -H "DAAUTH:basic [base64_encode('username:pwd')]" -H "API:mobile 1.0"
+            <div class="note default"><p>curl </p></div>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">curl -X GET [URL] -H <span class="string">"DAAUTH:token [tokenStr]]"</span></div><div class="line">curl -X GET [URL] -H <span class="string">"DAAUTH:basic [base64_encode('username:pwd')]"</span> -H <span class="string">"API:mobile 1.0"</span></div></pre></td></tr></table></figure>
+<hr>
+<h1 id="Apache"><a href="#Apache" class="headerlink" title="Apache"></a>Apache</h1><blockquote>
+<h2 id="httpd"><a href="#httpd" class="headerlink" title="httpd"></a>httpd</h2></blockquote>
+<figure class="highlight dos"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ httpd.exe -k install -n "httpd-<span class="number">2</span>.<span class="number">4</span>.<span class="number">27</span>-vc14"</div><div class="line">$ httpd.exe -k uninstall -n "httpd-<span class="number">2</span>.<span class="number">4</span>.<span class="number">27</span>-vc14"</div></pre></td></tr></table></figure>
+<hr>
+<h1 id="PHP"><a href="#PHP" class="headerlink" title="PHP"></a>PHP</h1><blockquote>
+<h2 id="php扩展库curl"><a href="#php扩展库curl" class="headerlink" title="php扩展库curl"></a>php扩展库curl</h2></blockquote>
+<ul>
+<li>将php解压文件中的libssh2.dll、php_curl.dll、ssleay32.dll、libeay32.dll放入Windows/System32文件夹(即使是用64位系统)</li>
+<li>然后，把libssh2.dll放入Apache2.4解压目录下的bin文件夹</li>
+<li>最后，在php.ini中，把extension=php_curl.dll前面的分号去掉,重启Apache，OK！</li>
+</ul>
+<blockquote>
+<h2 id="php-odbc-hive"><a href="#php-odbc-hive" class="headerlink" title="php odbc hive"></a>php odbc hive</h2></blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Driver=&#123;%s&#125;;HiveServerType=2;AuthMech=2;Schema=dm_finance;host=%s;port=%d</div></pre></td></tr></table></figure>
+<blockquote>
+<h2 id="php"><a href="#php" class="headerlink" title="php"></a>php</h2></blockquote>
+<ul>
+<li><h3 id="isset"><a href="#isset" class="headerlink" title="isset"></a>isset</h3><ul>
+<li>若变量不存在则返回 FALSE </li>
+<li>若变量存在且其值为NULL，也返回 FALSE </li>
+<li>若变量存在且值不为NULL，则返回 TURE </li>
+</ul>
+</li>
+<li><h3 id="empty"><a href="#empty" class="headerlink" title="empty"></a>empty</h3><ul>
+<li>“”、0、”0”、NULL、、FALSE、array()、var $var; 以及没有任何属性的对象</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h1 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h1><blockquote>
+<h2 id="windows-cmd"><a href="#windows-cmd" class="headerlink" title="windows cmd"></a>windows cmd</h2></blockquote>
+<ul>
+<li><h3 id="net-user"><a href="#net-user" class="headerlink" title="net user"></a>net user</h3><figure class="highlight dos"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">net</span> user test testpwd /add </div><div class="line"><span class="built_in">net</span> localgroup administrators test /add </div><div class="line"><span class="built_in">net</span> localgroup admimistrators</div><div class="line"><span class="built_in">net</span> user test</div><div class="line"><span class="built_in">net</span> localgroup admimistrators test /<span class="built_in">del</span> </div><div class="line"><span class="built_in">net</span> user test /<span class="built_in">del</span></div><div class="line"><span class="built_in">net</span> users</div></pre></td></tr></table></figure>
+</li>
+<li><h3 id="以某个用户运行"><a href="#以某个用户运行" class="headerlink" title="以某个用户运行"></a>以某个用户运行</h3><figure class="highlight dos"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">runas /user:jiangjh5 <span class="built_in">cmd</span></div></pre></td></tr></table></figure>
+</li>
+<li><h3 id="win-R-快捷命令"><a href="#win-R-快捷命令" class="headerlink" title="win+R 快捷命令"></a>win+R 快捷命令</h3><ul>
+<li>msconfig</li>
+<li>shell:startup</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h1 id="JS"><a href="#JS" class="headerlink" title="JS"></a>JS</h1><blockquote>
+<h2 id="JS-1"><a href="#JS-1" class="headerlink" title="JS"></a>JS</h2></blockquote>
+<ul>
+<li>getEventListeners($0)</li>
+<li>$(“”).trigger(“”);</li>
+</ul>
+<hr>
+<h1 id="Postgres"><a href="#Postgres" class="headerlink" title="Postgres"></a>Postgres</h1><blockquote>
+<h2 id="postgres"><a href="#postgres" class="headerlink" title="postgres"></a>postgres</h2></blockquote>
+<ul>
+<li>select * from pg_available_extensions;</li>
+<li>CREATE EXTENSION tablefunc;<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$ sudo su postgres</div><div class="line">$ psql</div><div class="line"></div><div class="line">$ \l // list database</div><div class="line">$ \c // connect a database</div><div class="line">$ \conninfo // 数据库连接信息</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<hr>
+<h1 id="Java-Keytool"><a href="#Java-Keytool" class="headerlink" title="Java Keytool"></a>Java Keytool</h1><blockquote>
+<h2 id="查看apk签名信息"><a href="#查看apk签名信息" class="headerlink" title="查看apk签名信息"></a>查看apk签名信息</h2></blockquote>
+<ul>
+<li>keytool -list -printcert -jarfile codata_v0.11.20170912_release_20170912183830.apks</li>
+</ul>
+<blockquote>
+<h2 id="adb-shell-dumpsys-activity"><a href="#adb-shell-dumpsys-activity" class="headerlink" title="adb shell dumpsys activity"></a>adb shell dumpsys activity</h2></blockquote>
+<ul>
+<li>adb shell dumpsys activity activities // 导出task任务栈</li>
+</ul>
+<blockquote>
+<h2 id="adb-pull-日志文件到本地目录"><a href="#adb-pull-日志文件到本地目录" class="headerlink" title="adb pull 日志文件到本地目录"></a>adb pull 日志文件到本地目录</h2></blockquote>
+<ul>
+<li>adb pull /sdcard/crash .</li>
+</ul>
 
-Apache
-httpd
-12$ httpd.exe -k install -n "httpd-2.4.27-vc14"$ httpd.exe -k uninstall -n "httpd-2.4.27-vc14"
-
-PHP
-php扩展库curl
-
-将php解压文件中的libssh2.dll、php_curl.dll、ssleay32.dll、libeay32.dll放入Windows/System32文件夹(即使是用64位系统)
-然后，把libssh2.dll放入Apache2.4解压目录下的bin文件夹
-最后，在php.ini中，把extension=php_curl.dll前面的分号去掉,重启Apache，OK！
-
-
-php odbc hive
-1Driver=&#123;%s&#125;;HiveServerType=2;AuthMech=2;Schema=dm_finance;host=%s;port=%d
-
-php
-
-isset
-若变量不存在则返回 FALSE 
-若变量存在且其值为NULL，也返回 FALSE 
-若变量存在且值不为NULL，则返回 TURE 
-
-
-empty
-“”、0、”0”、NULL、、FALSE、array()、var $var; 以及没有任何属性的对象
-
-
-
-
-Windows
-windows cmd
-
-net user1234567net user test testpwd /add net localgroup administrators test /add net localgroup admimistratorsnet user testnet localgroup admimistrators test /del net user test /delnet users
-
-以某个用户运行1runas /user:jiangjh5 cmd
-
-win+R 快捷命令
-msconfig
-shell:startup
-
-
-
-
-JS
-JS
-
-getEven
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/09/28/note-01/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+          
         
       
     </div>
@@ -749,15 +764,16 @@ getEven
       
         
           
-          Issue-11234567891011121314151617java.lang.NullPointerException: Attempt to invoke virtual method &apos;java.lang.Object android.content.Context.getSystemService(java.lang.String)&apos; on a null object reference	at android.view.LayoutInflater.from(LayoutInflater.java:232)	at android.view.View.inflate(View.java:21035)	at com.lenovo.da.fragment.StreamFragment$StreamsExpandableListAdapter.getChildView(StreamFragment.java:227)	at com.lenovo.da.fragment.StreamFragment.setCollapseListViewHeightBasedOnChildren(StreamFragment.java:417)	at com.lenovo.da.fragment.StreamFragment$2.onGroupCollapse(StreamFragment.java:101)	at android.widget.ExpandableListView.collapseGroup(ExpandableListView.java:779)	at com.lenovo.da.fragment.StreamFragment$3.doResponse(StreamFragment.java:133)	at com.lenovo.da.api.ApiService$CallbackFunc.onResponse(ApiService.java:130)	at retrofit2.ExecutorCallAdapterFactory$ExecutorCallbackCall$1$1.run(ExecutorCallAdapterFactory.java:68)	at android.os.Handler.handleCallback(Hand
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/09/28/android-crash-01/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+            <h2 id="Issue-1"><a href="#Issue-1" class="headerlink" title="Issue-1"></a>Issue-1</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">java.lang.NullPointerException: Attempt to invoke virtual method &apos;java.lang.Object android.content.Context.getSystemService(java.lang.String)&apos; on a null object reference</div><div class="line">	at android.view.LayoutInflater.from(LayoutInflater.java:232)</div><div class="line">	at android.view.View.inflate(View.java:21035)</div><div class="line">	at com.lenovo.da.fragment.StreamFragment$StreamsExpandableListAdapter.getChildView(StreamFragment.java:227)</div><div class="line">	at com.lenovo.da.fragment.StreamFragment.setCollapseListViewHeightBasedOnChildren(StreamFragment.java:417)</div><div class="line">	at com.lenovo.da.fragment.StreamFragment$2.onGroupCollapse(StreamFragment.java:101)</div><div class="line">	at android.widget.ExpandableListView.collapseGroup(ExpandableListView.java:779)</div><div class="line">	at com.lenovo.da.fragment.StreamFragment$3.doResponse(StreamFragment.java:133)</div><div class="line">	at com.lenovo.da.api.ApiService$CallbackFunc.onResponse(ApiService.java:130)</div><div class="line">	at retrofit2.ExecutorCallAdapterFactory$ExecutorCallbackCall$1$1.run(ExecutorCallAdapterFactory.java:68)</div><div class="line">	at android.os.Handler.handleCallback(Handler.java:751)</div><div class="line">	at android.os.Handler.dispatchMessage(Handler.java:95)</div><div class="line">	at android.os.Looper.loop(Looper.java:154)</div><div class="line">	at android.app.ActivityThread.main(ActivityThread.java:6196)</div><div class="line">	at java.lang.reflect.Method.invoke(Native Method)</div><div class="line">	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:888)</div><div class="line">	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:778)</div></pre></td></tr></table></figure>
+<blockquote>
+<p>fragment在重新创建的过程中，可能getContext()为空，可利用onAttach(Context context)来引用context</p>
+</blockquote>
+<h2 id="Issue-2"><a href="#Issue-2" class="headerlink" title="Issue-2"></a>Issue-2</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">java.lang.IllegalArgumentException: View=DecorView@abf9228[] not attached to window manager</div><div class="line">	at android.view.WindowManagerGlobal.findViewLocked(WindowManagerGlobal.java:473)</div><div class="line">	at android.view.WindowManagerGlobal.removeView(WindowManagerGlobal.java:382)</div><div class="line">	at android.view.WindowManagerImpl.removeViewImmediate(WindowManagerImpl.java:124)</div><div class="line">	at android.app.Dialog.dismissDialog(Dialog.java:383)</div><div class="line">	at android.app.Dialog.dismiss(Dialog.java:366)</div><div class="line">	at com.lenovo.da.utils.CommonUtils.togglePieChartProgressDialog(CommonUtils.java:123)</div><div class="line">	at com.lenovo.da.activity.gesturelock.ResetValidateActivity$3.doResponse(ResetValidateActivity.java:192)</div><div class="line">	at com.lenovo.da.api.ApiService$CallbackFunc.onResponse(ApiService.java:130)</div><div class="line">	at retrofit2.ExecutorCallAdapterFactory$ExecutorCallbackCall$1$1.run(ExecutorCallAdapterFactory.java:68)</div><div class="line">	at android.os.Handler.handleCallback(Handler.java:751)</div><div class="line">	at android.os.Handler.dispatchMessage(Handler.java:95)</div><div class="line">	at android.os.Looper.loop(Looper.java:154)</div><div class="line">	at android.app.ActivityThread.main(ActivityThread.java:6196)</div><div class="line">	at java.lang.reflect.Method.invoke(Native Method)</div><div class="line">	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:888)</div><div class="line">	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:778)</div></pre></td></tr></table></figure>
+<blockquote>
+<p>创建了一个没有attached to window manager的dialog，调用dialog.dismiss时windowManagerGlobal找不到此view</p>
+</blockquote>
+
+          
         
       
     </div>
@@ -875,24 +891,17 @@ getEven
       
         
           
-          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick StartCreate a new post1$ hexo new "My New Post"
-More info: Writing
-Run server12$ hexo server$ hexo server -s
-More info: Server
-Generate static files12$ hexo generate$ hexo generate --watch
-More info: Generating
-Deploy to remote sites1$ hexo deploy
-More info: Deployment
+            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div><div class="line">$ hexo server -s</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div><div class="line">$ hexo generate --watch</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
 
           
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/09/28/hello-world/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
         
       
     </div>
