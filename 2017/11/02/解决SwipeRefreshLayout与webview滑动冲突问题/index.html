@@ -85,7 +85,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Android," />
 
 
 
@@ -101,17 +101,18 @@
 
 
 
-<meta name="description" content="curl  12curl -X GET [URL] -H &quot;DAAUTH:token [tokenStr]]&quot;curl -X GET [URL] -H &quot;DAAUTH:basic [base64_encode(&apos;username:pwd&apos;)]&quot; -H &quot;API:mobile 1.0&quot;  Apache httpd 12$ httpd.exe -k install -n &quot;httpd-2.4.27-v">
+<meta name="description" content="1. 自定义WebView，重写onTouchEvent方法1234567891011121314151617@Overridepublic boolean onTouchEvent(MotionEvent event) &amp;#123;    switch (event.getAction())&amp;#123;        case MotionEvent.ACTION_DOWN:">
+<meta name="keywords" content="Android">
 <meta property="og:type" content="article">
-<meta property="og:title" content="note-01">
-<meta property="og:url" content="http://yoursite.com/2017/09/28/note-01/index.html">
+<meta property="og:title" content="解决SwipeRefreshLayout与webview滑动冲突问题">
+<meta property="og:url" content="http://yoursite.com/2017/11/02/解决SwipeRefreshLayout与webview滑动冲突问题/index.html">
 <meta property="og:site_name" content="Jiangjh5&#39;s Notes">
-<meta property="og:description" content="curl  12curl -X GET [URL] -H &quot;DAAUTH:token [tokenStr]]&quot;curl -X GET [URL] -H &quot;DAAUTH:basic [base64_encode(&apos;username:pwd&apos;)]&quot; -H &quot;API:mobile 1.0&quot;  Apache httpd 12$ httpd.exe -k install -n &quot;httpd-2.4.27-v">
+<meta property="og:description" content="1. 自定义WebView，重写onTouchEvent方法1234567891011121314151617@Overridepublic boolean onTouchEvent(MotionEvent event) &amp;#123;    switch (event.getAction())&amp;#123;        case MotionEvent.ACTION_DOWN:">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-09-28T09:25:14.744Z">
+<meta property="og:updated_time" content="2017-11-02T05:11:47.932Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="note-01">
-<meta name="twitter:description" content="curl  12curl -X GET [URL] -H &quot;DAAUTH:token [tokenStr]]&quot;curl -X GET [URL] -H &quot;DAAUTH:basic [base64_encode(&apos;username:pwd&apos;)]&quot; -H &quot;API:mobile 1.0&quot;  Apache httpd 12$ httpd.exe -k install -n &quot;httpd-2.4.27-v">
+<meta name="twitter:title" content="解决SwipeRefreshLayout与webview滑动冲突问题">
+<meta name="twitter:description" content="1. 自定义WebView，重写onTouchEvent方法1234567891011121314151617@Overridepublic boolean onTouchEvent(MotionEvent event) &amp;#123;    switch (event.getAction())&amp;#123;        case MotionEvent.ACTION_DOWN:">
 
 
 
@@ -140,13 +141,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/09/28/note-01/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/11/02/解决SwipeRefreshLayout与webview滑动冲突问题/"/>
 
 
 
 
 
-  <title>note-01 | Jiangjh5's Notes</title>
+  <title>解决SwipeRefreshLayout与webview滑动冲突问题 | Jiangjh5's Notes</title>
   
 
 
@@ -313,7 +314,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/28/note-01/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/02/解决SwipeRefreshLayout与webview滑动冲突问题/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jiangjh5">
@@ -330,7 +331,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">note-01</h1>
+          <h1 class="post-title" itemprop="name headline">解决SwipeRefreshLayout与webview滑动冲突问题</h1>
         
 
         <div class="post-meta">
@@ -342,8 +343,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-28T15:26:30+08:00">
-                2017-09-28
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-02T13:03:18+08:00">
+                2017-11-02
               </time>
             
 
@@ -352,28 +353,6 @@
             
           </span>
 
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/note/" itemprop="url" rel="index">
-                    <span itemprop="name">note</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -402,82 +381,11 @@
       
 
       
-        <div class="note default"><p>curl </p></div>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">curl -X GET [URL] -H <span class="string">"DAAUTH:token [tokenStr]]"</span></div><div class="line">curl -X GET [URL] -H <span class="string">"DAAUTH:basic [base64_encode('username:pwd')]"</span> -H <span class="string">"API:mobile 1.0"</span></div></pre></td></tr></table></figure>
-<hr>
-<h1 id="Apache"><a href="#Apache" class="headerlink" title="Apache"></a>Apache</h1><blockquote>
-<h2 id="httpd"><a href="#httpd" class="headerlink" title="httpd"></a>httpd</h2></blockquote>
-<figure class="highlight dos"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ httpd.exe -k install -n "httpd-<span class="number">2</span>.<span class="number">4</span>.<span class="number">27</span>-vc14"</div><div class="line">$ httpd.exe -k uninstall -n "httpd-<span class="number">2</span>.<span class="number">4</span>.<span class="number">27</span>-vc14"</div></pre></td></tr></table></figure>
-<hr>
-<h1 id="PHP"><a href="#PHP" class="headerlink" title="PHP"></a>PHP</h1><blockquote>
-<h2 id="php扩展库curl"><a href="#php扩展库curl" class="headerlink" title="php扩展库curl"></a>php扩展库curl</h2></blockquote>
-<ul>
-<li>将php解压文件中的libssh2.dll、php_curl.dll、ssleay32.dll、libeay32.dll放入Windows/System32文件夹(即使是用64位系统)</li>
-<li>然后，把libssh2.dll放入Apache2.4解压目录下的bin文件夹</li>
-<li>最后，在php.ini中，把extension=php_curl.dll前面的分号去掉,重启Apache，OK！</li>
-</ul>
+        <h2 id="1-自定义WebView，重写onTouchEvent方法"><a href="#1-自定义WebView，重写onTouchEvent方法" class="headerlink" title="1. 自定义WebView，重写onTouchEvent方法"></a>1. 自定义WebView，重写onTouchEvent方法</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">onTouchEvent</span><span class="params">(MotionEvent event)</span> </span>&#123;</div><div class="line">    <span class="keyword">switch</span> (event.getAction())&#123;</div><div class="line">        <span class="keyword">case</span> MotionEvent.ACTION_DOWN:</div><div class="line">            <span class="comment">// 有些网页，上下滚动，getScrollY()恒为0, 推测是滚动事件被网页内布局捕获，所以网页内的布局内部滚动，网页大框架整体没有滚动；</span></div><div class="line">            <span class="comment">// 所以针对这种情况，手动向上滚动1，那么getScrollY()会为1；</span></div><div class="line">            <span class="comment">// 当向下滚动到达顶部时，即网页内布局内部的滚动到达顶部，事件不被内部捕获，被网页大框架捕获，会把向上滚动的1拉下来</span></div><div class="line">            <span class="comment">// 个人理解（by jiangjh5)</span></div><div class="line">            <span class="keyword">if</span>(<span class="keyword">this</span>.getScrollY() &lt;= <span class="number">0</span>)&#123;</div><div class="line">                <span class="keyword">this</span>.scrollTo(<span class="number">0</span>,<span class="number">1</span>);</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">break</span>;</div><div class="line">        <span class="keyword">case</span> MotionEvent.ACTION_UP:</div><div class="line">            <span class="keyword">break</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">super</span>.onTouchEvent(event);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="2-设置SwipeRefreshView的OnChildScrollUpCallback监听事件"><a href="#2-设置SwipeRefreshView的OnChildScrollUpCallback监听事件" class="headerlink" title="2.设置SwipeRefreshView的OnChildScrollUpCallback监听事件"></a>2.设置SwipeRefreshView的OnChildScrollUpCallback监听事件</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">mRefreshLayoutSRL.setOnChildScrollUpCallback(<span class="keyword">new</span> SwipeRefreshLayout.OnChildScrollUpCallback() &#123;</div><div class="line">            <span class="meta">@Override</span></div><div class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">canChildScrollUp</span><span class="params">(SwipeRefreshLayout parent, @Nullable View child)</span> </span>&#123;</div><div class="line">                <span class="keyword">return</span> child.getScrollY() &gt; <span class="number">0</span>;</div><div class="line">            &#125;</div><div class="line">        &#125;);</div></pre></td></tr></table></figure>
 <blockquote>
-<h2 id="php-odbc-hive"><a href="#php-odbc-hive" class="headerlink" title="php odbc hive"></a>php odbc hive</h2></blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Driver=&#123;%s&#125;;HiveServerType=2;AuthMech=2;Schema=dm_finance;host=%s;port=%d</div></pre></td></tr></table></figure>
-<blockquote>
-<h2 id="php"><a href="#php" class="headerlink" title="php"></a>php</h2></blockquote>
-<ul>
-<li><h3 id="isset"><a href="#isset" class="headerlink" title="isset"></a>isset</h3><ul>
-<li>若变量不存在则返回 FALSE </li>
-<li>若变量存在且其值为NULL，也返回 FALSE </li>
-<li>若变量存在且值不为NULL，则返回 TURE </li>
-</ul>
-</li>
-<li><h3 id="empty"><a href="#empty" class="headerlink" title="empty"></a>empty</h3><ul>
-<li>“”、0、”0”、NULL、、FALSE、array()、var $var; 以及没有任何属性的对象</li>
-</ul>
-</li>
-</ul>
-<hr>
-<h1 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h1><blockquote>
-<h2 id="windows-cmd"><a href="#windows-cmd" class="headerlink" title="windows cmd"></a>windows cmd</h2></blockquote>
-<ul>
-<li><h3 id="net-user"><a href="#net-user" class="headerlink" title="net user"></a>net user</h3><figure class="highlight dos"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">net</span> user test testpwd /add </div><div class="line"><span class="built_in">net</span> localgroup administrators test /add </div><div class="line"><span class="built_in">net</span> localgroup admimistrators</div><div class="line"><span class="built_in">net</span> user test</div><div class="line"><span class="built_in">net</span> localgroup admimistrators test /<span class="built_in">del</span> </div><div class="line"><span class="built_in">net</span> user test /<span class="built_in">del</span></div><div class="line"><span class="built_in">net</span> users</div></pre></td></tr></table></figure>
-</li>
-<li><h3 id="以某个用户运行"><a href="#以某个用户运行" class="headerlink" title="以某个用户运行"></a>以某个用户运行</h3><figure class="highlight dos"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">runas /user:jiangjh5 <span class="built_in">cmd</span></div></pre></td></tr></table></figure>
-</li>
-<li><h3 id="win-R-快捷命令"><a href="#win-R-快捷命令" class="headerlink" title="win+R 快捷命令"></a>win+R 快捷命令</h3><ul>
-<li>msconfig</li>
-<li>shell:startup</li>
-</ul>
-</li>
-</ul>
-<hr>
-<h1 id="JS"><a href="#JS" class="headerlink" title="JS"></a>JS</h1><blockquote>
-<h2 id="JS-1"><a href="#JS-1" class="headerlink" title="JS"></a>JS</h2></blockquote>
-<ul>
-<li>getEventListeners($0)</li>
-<li>$(“”).trigger(“”);</li>
-</ul>
-<hr>
-<h1 id="Postgres"><a href="#Postgres" class="headerlink" title="Postgres"></a>Postgres</h1><blockquote>
-<h2 id="postgres"><a href="#postgres" class="headerlink" title="postgres"></a>postgres</h2></blockquote>
-<ul>
-<li>select * from pg_available_extensions;</li>
-<li>CREATE EXTENSION tablefunc;<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$ sudo su postgres</div><div class="line">$ psql</div><div class="line"></div><div class="line">$ \l // list database</div><div class="line">$ \c // connect a database</div><div class="line">$ \conninfo // 数据库连接信息</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<hr>
-<h1 id="Java-Keytool"><a href="#Java-Keytool" class="headerlink" title="Java Keytool"></a>Java Keytool</h1><blockquote>
-<h2 id="查看apk签名信息"><a href="#查看apk签名信息" class="headerlink" title="查看apk签名信息"></a>查看apk签名信息</h2></blockquote>
-<ul>
-<li>keytool -list -printcert -jarfile codata_v0.11.20170912_release_20170912183830.apks</li>
-</ul>
-<blockquote>
-<h2 id="adb-shell-dumpsys-activity"><a href="#adb-shell-dumpsys-activity" class="headerlink" title="adb shell dumpsys activity"></a>adb shell dumpsys activity</h2></blockquote>
-<ul>
-<li>adb shell dumpsys activity activities // 导出task任务栈</li>
-</ul>
-<blockquote>
-<h2 id="adb-pull-日志文件到本地目录"><a href="#adb-pull-日志文件到本地目录" class="headerlink" title="adb pull 日志文件到本地目录"></a>adb pull 日志文件到本地目录</h2></blockquote>
-<ul>
-<li>adb pull /sdcard/crash .</li>
-</ul>
+<p>个人理解，只要webview内的网页能整体滚动，应该是不会跟SwipeRefreshLayout下拉刷新冲突的，但如果只有网页内嵌套的布局内部滚动，外部是认为没滚动，那么SwipeRefreshLayout才触发下拉刷新</p>
+</blockquote>
 
       
     </div>
@@ -493,6 +401,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/Android/" rel="tag"># Android</a>
+          
+        </div>
+      
 
       
       
@@ -502,8 +416,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/09/28/android-crash-01/" rel="next" title="android-crash-01">
-                <i class="fa fa-chevron-left"></i> android-crash-01
+              <a href="/2017/09/29/git常用命令/" rel="next" title="git常用命令">
+                <i class="fa fa-chevron-left"></i> git常用命令
               </a>
             
           </div>
@@ -511,10 +425,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/09/29/git常用命令/" rel="prev" title="git常用命令">
-                git常用命令 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -648,7 +558,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Apache"><span class="nav-number">1.</span> <span class="nav-text">Apache</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#httpd"><span class="nav-number">1.1.</span> <span class="nav-text">httpd</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#PHP"><span class="nav-number">2.</span> <span class="nav-text">PHP</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#php扩展库curl"><span class="nav-number">2.1.</span> <span class="nav-text">php扩展库curl</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#php-odbc-hive"><span class="nav-number">2.2.</span> <span class="nav-text">php odbc hive</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#php"><span class="nav-number">2.3.</span> <span class="nav-text">php</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#isset"><span class="nav-number">2.3.1.</span> <span class="nav-text">isset</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#empty"><span class="nav-number">2.3.2.</span> <span class="nav-text">empty</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Windows"><span class="nav-number">3.</span> <span class="nav-text">Windows</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#windows-cmd"><span class="nav-number">3.1.</span> <span class="nav-text">windows cmd</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#net-user"><span class="nav-number">3.1.1.</span> <span class="nav-text">net user</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#以某个用户运行"><span class="nav-number">3.1.2.</span> <span class="nav-text">以某个用户运行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#win-R-快捷命令"><span class="nav-number">3.1.3.</span> <span class="nav-text">win+R 快捷命令</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JS"><span class="nav-number">4.</span> <span class="nav-text">JS</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#JS-1"><span class="nav-number">4.1.</span> <span class="nav-text">JS</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Postgres"><span class="nav-number">5.</span> <span class="nav-text">Postgres</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#postgres"><span class="nav-number">5.1.</span> <span class="nav-text">postgres</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Java-Keytool"><span class="nav-number">6.</span> <span class="nav-text">Java Keytool</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#查看apk签名信息"><span class="nav-number">6.1.</span> <span class="nav-text">查看apk签名信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#adb-shell-dumpsys-activity"><span class="nav-number">6.2.</span> <span class="nav-text">adb shell dumpsys activity</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#adb-pull-日志文件到本地目录"><span class="nav-number">6.3.</span> <span class="nav-text">adb pull 日志文件到本地目录</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-自定义WebView，重写onTouchEvent方法"><span class="nav-number">1.</span> <span class="nav-text">1. 自定义WebView，重写onTouchEvent方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-设置SwipeRefreshView的OnChildScrollUpCallback监听事件"><span class="nav-number">2.</span> <span class="nav-text">2.设置SwipeRefreshView的OnChildScrollUpCallback监听事件</span></a></li></ol></div>
             
 
           </div>

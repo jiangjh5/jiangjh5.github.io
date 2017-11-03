@@ -311,6 +311,130 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/02/解决SwipeRefreshLayout与webview滑动冲突问题/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jiangjh5">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jiangjh5's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/11/02/解决SwipeRefreshLayout与webview滑动冲突问题/" itemprop="url">解决SwipeRefreshLayout与webview滑动冲突问题</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-02T13:03:18+08:00">
+                2017-11-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="1-自定义WebView，重写onTouchEvent方法"><a href="#1-自定义WebView，重写onTouchEvent方法" class="headerlink" title="1. 自定义WebView，重写onTouchEvent方法"></a>1. 自定义WebView，重写onTouchEvent方法</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">onTouchEvent</span><span class="params">(MotionEvent event)</span> </span>&#123;</div><div class="line">    <span class="keyword">switch</span> (event.getAction())&#123;</div><div class="line">        <span class="keyword">case</span> MotionEvent.ACTION_DOWN:</div><div class="line">            <span class="comment">// 有些网页，上下滚动，getScrollY()恒为0, 推测是滚动事件被网页内布局捕获，所以网页内的布局内部滚动，网页大框架整体没有滚动；</span></div><div class="line">            <span class="comment">// 所以针对这种情况，手动向上滚动1，那么getScrollY()会为1；</span></div><div class="line">            <span class="comment">// 当向下滚动到达顶部时，即网页内布局内部的滚动到达顶部，事件不被内部捕获，被网页大框架捕获，会把向上滚动的1拉下来</span></div><div class="line">            <span class="comment">// 个人理解（by jiangjh5)</span></div><div class="line">            <span class="keyword">if</span>(<span class="keyword">this</span>.getScrollY() &lt;= <span class="number">0</span>)&#123;</div><div class="line">                <span class="keyword">this</span>.scrollTo(<span class="number">0</span>,<span class="number">1</span>);</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">break</span>;</div><div class="line">        <span class="keyword">case</span> MotionEvent.ACTION_UP:</div><div class="line">            <span class="keyword">break</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">super</span>.onTouchEvent(event);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="2-设置SwipeRefreshView的OnChildScrollUpCallback监听事件"><a href="#2-设置SwipeRefreshView的OnChildScrollUpCallback监听事件" class="headerlink" title="2.设置SwipeRefreshView的OnChildScrollUpCallback监听事件"></a>2.设置SwipeRefreshView的OnChildScrollUpCallback监听事件</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">mRefreshLayoutSRL.setOnChildScrollUpCallback(<span class="keyword">new</span> SwipeRefreshLayout.OnChildScrollUpCallback() &#123;</div><div class="line">            <span class="meta">@Override</span></div><div class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">canChildScrollUp</span><span class="params">(SwipeRefreshLayout parent, @Nullable View child)</span> </span>&#123;</div><div class="line">                <span class="keyword">return</span> child.getScrollY() &gt; <span class="number">0</span>;</div><div class="line">            &#125;</div><div class="line">        &#125;);</div></pre></td></tr></table></figure>
+<blockquote>
+<p>个人理解，只要webview内的网页能整体滚动，应该是不会跟SwipeRefreshLayout下拉刷新冲突的，但如果只有网页内嵌套的布局内部滚动，外部是认为没滚动，那么SwipeRefreshLayout才触发下拉刷新</p>
+</blockquote>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/29/git常用命令/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -981,7 +1105,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1003,7 +1127,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
